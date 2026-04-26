@@ -3,6 +3,7 @@ extern crate user32;
 extern crate kernel32;
 use std::fs::{File, OpenOptions};
 use std::io::prelude::*;
+use std::io::Write;
 #[allow(unused_variables)]
 fn main() {
 	stealth()
